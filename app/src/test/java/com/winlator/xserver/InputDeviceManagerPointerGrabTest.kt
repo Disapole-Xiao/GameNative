@@ -42,7 +42,7 @@ class InputDeviceManagerPointerGrabTest {
         }
         `when`(client.outputStream).thenReturn(output)
         server.grabManager.activatePointerGrab(
-            server.windowManager.rootWindow, false, Bitmask(mask), client, null
+            server.windowManager.rootWindow, false, Bitmask(mask.toLong()), client, null
         )
         return output
     }
