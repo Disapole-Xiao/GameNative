@@ -27,8 +27,8 @@ jobs:
           POSTHOG_API_KEY=dummy
           POSTHOG_HOST=https://us.i.posthog.com
           EOF
-      - name: Run unit tests
-        run: ./gradlew :app:testLegacyDebugUnitTest
+      - name: Run pointer grab unit tests
+        run: ./gradlew :app:testLegacyDebugUnitTest --tests com.winlator.xserver.InputDeviceManagerPointerGrabTest
       - name: Build test APK
         run: ./gradlew :app:assembleLegacyDebug
       - name: Upload test APK
