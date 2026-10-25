@@ -166,6 +166,7 @@ android {
             isDebuggable = true
             isMinifyEnabled = false
             isShrinkResources = false
+            applicationIdSuffix = ".mousefix"
             signingConfig = signingConfigs.getByName("debug")
         }
         release {
